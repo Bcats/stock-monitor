@@ -1,6 +1,6 @@
-package com.bcat.api;
+package com.bcat.agent.dao;
 
-import com.bcat.model.StockData;
+import com.bcat.agent.model.StockData;
 
 import java.util.List;
 

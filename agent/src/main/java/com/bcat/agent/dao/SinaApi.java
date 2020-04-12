@@ -1,11 +1,9 @@
-package com.bcat.api;
+package com.bcat.agent.dao;
 
-import com.bcat.model.StockData;
+import com.bcat.agent.model.StockData;
 import com.sun.deploy.util.StringUtils;
 
-import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
