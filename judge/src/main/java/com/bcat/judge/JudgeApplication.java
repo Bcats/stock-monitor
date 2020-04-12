@@ -1,10 +1,10 @@
-package com.bcat;
+package com.bcat.judge;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class JudgeApplication
 {
     public static void main( String[] args )
     {

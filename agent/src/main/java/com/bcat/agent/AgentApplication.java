@@ -1,10 +1,10 @@
-package com.bcat;
+package com.bcat.agent;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class AgentApplication
 {
     public static void main( String[] args )
     {

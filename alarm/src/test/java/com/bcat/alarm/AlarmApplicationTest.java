@@ -1,4 +1,4 @@
-package com.bcat;
+package com.bcat.alarm;
 
 import static org.junit.Assert.assertTrue;
 
@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class AlarmApplicationTest
 {
     /**
      * Rigorous Test :-)

@@ -1,10 +1,10 @@
-package com.bcat;
+package com.bcat.alarm;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class AlarmApplication
 {
     public static void main( String[] args )
     {

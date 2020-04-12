@@ -1,10 +1,10 @@
-package com.bcat;
+package com.bcat.rrd;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class RrdApplication
 {
     public static void main( String[] args )
     {

@@ -1,0 +1,26 @@
+package com.bcat.agent;
+
+
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+/**
+ * Unit test for simple App.
+ */
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class AgentApplicationTest
+{
+    /**
+     * Rigorous Test :-)
+     */
+    @Test
+    public void shouldAnswerWithTrue()
+    {
+        assertTrue( true );
+    }
+}
