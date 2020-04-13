@@ -1,6 +1,7 @@
 package com.bcat.agent.dao;
 
 import com.bcat.agent.AgentApplicationTest;
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -14,6 +15,11 @@ public class SinaApiTest extends AgentApplicationTest {
 
     @Test
     public void getDataTest(){
-        sinaApi.getData(Collections.singletonList("sh601006"));
+        sinaApi.getData(Arrays.asList("sz002307","sh600928"));
+    }
+
+    @Test
+    public void test1(){
+        Assert.assertTrue("var hq_str_sz001002".matches("^var\\d*$"));
     }
 }
