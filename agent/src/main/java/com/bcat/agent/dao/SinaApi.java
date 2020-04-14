@@ -24,14 +24,12 @@ public class SinaApi implements Api {
 
         String apiCode = String.join(",", stockCode);
         String path = SINA_API + apiCode;
-
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .get()
                 .url(path)
                 .build();
         Call call = client.newCall(request);
-
         try {
             Response response = call.execute();
             return stockDataTransction(response);
@@ -42,13 +40,9 @@ public class SinaApi implements Api {
     }
 
     private List<StockData> stockDataTransction(Response response) {
-
         List<StockData> stockDataList = new ArrayList<>();
-
         try {
-
             String result = response.body().string().trim();
-
             String[] everyStock = result.split("\n");
             for (String stock : everyStock) {
                 String regex = "(var\\shq_str_\\w{8}=\"|\";)";

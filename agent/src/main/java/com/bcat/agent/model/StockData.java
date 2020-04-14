@@ -7,62 +7,62 @@ import java.util.List;
 
 public class StockData {
 
-    private String stockName;
     /* 股票名称 */
-    private BigDecimal todayOpenPrice;
+    private String stockName;
     /* 今开价 */
-    private BigDecimal yesterdayClosePrice;
+    private BigDecimal todayOpenPrice;
     /* 昨收价 */
-    private BigDecimal nowPrice;
+    private BigDecimal yesterdayClosePrice;
     /* 当前价 */
-    private BigDecimal todayMaxPrice;
+    private BigDecimal nowPrice;
     /* 今日最高价 */
-    private BigDecimal todayMinPrice;
+    private BigDecimal todayMaxPrice;
     /* 今日最低价 */
-    private Integer stockTransactionNumber;
+    private BigDecimal todayMinPrice;
     /* 股票成交数（股） */
-    private Integer stockTransactionAmount;
+    private Integer stockTransactionNumber;
     /* 股票成交金额（元） */
-    private Integer buyOneNumber;
+    private Integer stockTransactionAmount;
     /* 买一数（股） */
-    private BigDecimal buyOnePrice;
+    private Integer buyOneNumber;
     /* 买一价（元） */
-    private Integer buyTwoNumber;
+    private BigDecimal buyOnePrice;
     /* 买二数（股） */
-    private BigDecimal buyTwoPrice;
+    private Integer buyTwoNumber;
     /* 买二价（元） */
-    private Integer buyThreeNumber;
+    private BigDecimal buyTwoPrice;
     /* 买三数（股） */
-    private BigDecimal buyThreePrice;
+    private Integer buyThreeNumber;
     /* 买三数（元） */
-    private Integer buyFourNumber;
+    private BigDecimal buyThreePrice;
     /* 买四数（股） */
-    private BigDecimal buyFourPrice;
+    private Integer buyFourNumber;
     /* 买四数（元） */
-    private Integer buyFiveNumber;
+    private BigDecimal buyFourPrice;
     /* 买五数（股） */
-    private BigDecimal buyFivePrice;
+    private Integer buyFiveNumber;
     /* 买五数（元） */
-    private Integer sellOneNumber;
+    private BigDecimal buyFivePrice;
     /* 卖一数（股） */
-    private BigDecimal sellOnePrice;
+    private Integer sellOneNumber;
     /* 卖一价（元） */
-    private Integer sellTwoNumber;
+    private BigDecimal sellOnePrice;
     /* 卖二数（股） */
-    private BigDecimal sellTwoPrice;
+    private Integer sellTwoNumber;
     /* 卖二价（元） */
-    private Integer sellThreeNumber;
+    private BigDecimal sellTwoPrice;
     /* 卖三数（股） */
-    private BigDecimal sellThreePrice;
+    private Integer sellThreeNumber;
     /* 卖三数（元） */
-    private Integer sellFourNumber;
+    private BigDecimal sellThreePrice;
     /* 卖四数（股） */
-    private BigDecimal sellFourPrice;
+    private Integer sellFourNumber;
     /* 卖四数（元） */
-    private Integer sellFiveNumber;
+    private BigDecimal sellFourPrice;
     /* 卖五数（股） */
-    private BigDecimal sellFivePrice;
+    private Integer sellFiveNumber;
     /* 卖五数（元） */
+    private BigDecimal sellFivePrice;
 
     public StockData(List<String> stockDataList){
 
