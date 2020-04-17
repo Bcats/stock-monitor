@@ -1,12 +1,14 @@
 package com.bcat.agent.dao;
 
 import com.bcat.agent.AgentApplicationTest;
+import com.bcat.agent.model.StockData;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Map;
 
 public class SinaApiTest extends AgentApplicationTest {
 
@@ -15,7 +17,9 @@ public class SinaApiTest extends AgentApplicationTest {
 
     @Test
     public void getDataTest(){
-        sinaApi.getData(Arrays.asList("sz002307","sh600928"));
+        Map map = sinaApi.getDataByStockCodeList(Arrays.asList("sz002307","sh600928"));
+        StockData stockData = (StockData) map.get("sz002307");
+        System.out.println(stockData.toString());
     }
 
     @Test

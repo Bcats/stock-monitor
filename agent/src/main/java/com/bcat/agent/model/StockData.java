@@ -1,10 +1,13 @@
 package com.bcat.agent.model;
 
 import lombok.Getter;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.util.List;
 
+@Getter
+@ToString
 public class StockData {
 
     /* 股票名称 */

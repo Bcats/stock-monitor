@@ -9,9 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @Slf4j
 @Repository
@@ -20,7 +18,7 @@ public class SinaApi implements Api {
     private static final String SINA_API = "http://hq.sinajs.cn/list=";
 
     @Override
-    public List<StockData> getData(List<String> stockCode) {
+    public Map<String, StockData> getDataByStockCodeList(List<String> stockCode) {
 
         String apiCode = String.join(",", stockCode);
         String path = SINA_API + apiCode;
@@ -32,30 +30,28 @@ public class SinaApi implements Api {
         Call call = client.newCall(request);
         try {
             Response response = call.execute();
-            return stockDataTransction(response);
+            String result = response.body().string().trim();
+            return stockDataFormat(result);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    private List<StockData> stockDataTransction(Response response) {
-        List<StockData> stockDataList = new ArrayList<>();
-        try {
-            String result = response.body().string().trim();
-            String[] everyStock = result.split("\n");
-            for (String stock : everyStock) {
-                String regex = "(var\\shq_str_\\w{8}=\"|\";)";
-                String stockDataItem = stock.replaceAll(regex, "");
-                List<String> stockDataListItem = Arrays.asList(stockDataItem.split(","));
-                StockData stockData = new StockData(stockDataListItem);
-                stockDataList.add(stockData);
-            }
+    private Map<String, StockData> stockDataFormat(String result) {
 
-        } catch (IOException e) {
-            e.printStackTrace();
+        Map<String, StockData> stockDataMap = new HashMap<>();
+        String[] everyStock = result.split("\n");
+        for (String stock : everyStock) {
+            String stockCode = stock.substring(11,19);
+            String regex = "(var\\shq_str_\\w{8}=\"|\";)";
+            String stockDataItem = stock.replaceAll(regex, "");
+            List<String> stockDataListItem = Arrays.asList(stockDataItem.split(","));
+            StockData stockData = new StockData(stockDataListItem);
+            stockDataMap.put(stockCode, stockData);
         }
-        return stockDataList;
+
+        return stockDataMap;
     }
 
 }
