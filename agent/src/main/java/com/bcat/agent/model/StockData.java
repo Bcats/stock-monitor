@@ -4,7 +4,9 @@ import lombok.Getter;
 import lombok.ToString;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Getter
 @ToString
@@ -76,8 +78,6 @@ public class StockData {
             this.todayOpenPrice = new BigDecimal(stockDataList.get(1));
         }
 
-        this.todayOpenPrice = new BigDecimal(stockDataList.get(1));
-
         this.yesterdayClosePrice = new BigDecimal(stockDataList.get(2));
 
         this.nowPrice = new BigDecimal(stockDataList.get(3));
@@ -130,6 +130,40 @@ public class StockData {
 
         this.sellFivePrice = new BigDecimal(stockDataList.get(29));
 
+    }
 
+    public Map<String, Object> getDataForMap(){
+
+        Map<String, Object> stockDataMap = new HashMap<>();
+        stockDataMap.put("stockName", this.stockName);
+        stockDataMap.put("todayOpenPrice", this.todayOpenPrice);
+        stockDataMap.put("yesterdayClosePrice", this.yesterdayClosePrice);
+        stockDataMap.put("nowPrice", this.nowPrice);
+        stockDataMap.put("todayMaxPrice", this.todayMaxPrice);
+        stockDataMap.put("todayMinPrice", this.todayMinPrice);
+        stockDataMap.put("stockTransactionNumber", this.stockTransactionNumber);
+        stockDataMap.put("stockTransactionAmount", this.stockTransactionAmount);
+        stockDataMap.put("buyOneNumber", this.buyOneNumber);
+        stockDataMap.put("buyOnePrice", this.buyOnePrice);
+        stockDataMap.put("buyTwoNumber", this.buyTwoNumber);
+        stockDataMap.put("buyTwoPrice", this.buyTwoPrice);
+        stockDataMap.put("buyThreeNumber", this.buyThreeNumber);
+        stockDataMap.put("buyThreePrice", this.buyThreePrice);
+        stockDataMap.put("buyFourNumber", this.buyFourNumber);
+        stockDataMap.put("buyFourPrice", this.buyFourPrice);
+        stockDataMap.put("buyFiveNumber", this.buyFiveNumber);
+        stockDataMap.put("buyFivePrice", this.buyFivePrice);
+        stockDataMap.put("sellOneNumber", this.sellOneNumber);
+        stockDataMap.put("sellOnePrice", this.sellOnePrice);
+        stockDataMap.put("sellTwoNumber", this.sellTwoNumber);
+        stockDataMap.put("sellTwoPrice", this.sellTwoPrice);
+        stockDataMap.put("sellThreeNumber", this.sellThreeNumber);
+        stockDataMap.put("sellThreePrice", this.sellThreePrice);
+        stockDataMap.put("sellFourNumber", this.sellFourNumber);
+        stockDataMap.put("sellFourPrice", this.sellFourPrice);
+        stockDataMap.put("sellFiveNumber", this.sellFiveNumber);
+        stockDataMap.put("sellFivePrice", this.sellFivePrice);
+
+        return stockDataMap;
     }
 }
