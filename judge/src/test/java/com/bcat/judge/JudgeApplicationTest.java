@@ -2,7 +2,7 @@ package com.bcat.judge;
 
 import static org.junit.Assert.assertTrue;
 
-import com.bcat.judge.utils.CompareItemResolver;
+import com.bcat.judge.utils.AlertExpressionResolver;
 import org.junit.Test;
 
 /**
@@ -17,7 +17,7 @@ public class JudgeApplicationTest
     public void shouldAnswerWithTrue()
     {
         String s = "x lt 6.12";
-        boolean b = new CompareItemResolver().isTriggerAlarm(s, "7");
+        boolean b = new AlertExpressionResolver().isTriggerAlarm(s, "7");
         System.out.println("");
     }
 }

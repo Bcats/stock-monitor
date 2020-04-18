@@ -1,4 +1,4 @@
-package com.bcat.alarm.model;
+package com.bcat.alarm.utils;
 
 import lombok.Setter;
 
@@ -8,7 +8,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 @Setter
-public class Email {
+public class EmailUtils {
     // 收件人
     private String receiver;
     // 发件人

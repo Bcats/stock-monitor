@@ -20,14 +20,9 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId> mmm
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.bcat</groupId>
-            <artifactId>agent</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
+
         <dependency>
             <groupId>com.bcat</groupId>
             <artifactId>agent</artifactId>
@@ -37,6 +32,12 @@
         <dependency>
             <groupId>com.bcat</groupId>
             <artifactId>judge</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.bcat</groupId>
+            <artifactId>alarm</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

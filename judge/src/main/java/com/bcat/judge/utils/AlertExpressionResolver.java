@@ -2,7 +2,7 @@ package com.bcat.judge.utils;
 
 import java.math.BigDecimal;
 
-public class CompareItemResolver {
+public class AlertExpressionResolver {
 
     // expressionMin数据类似： 7 gt 6.0 and 7 lt 7.12
     public boolean isTriggerAlarm(String expression, String getValue){
