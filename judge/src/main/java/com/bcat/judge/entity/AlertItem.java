@@ -1,4 +1,4 @@
-package com.bcat.judge.model;
+package com.bcat.judge.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,9 +12,9 @@ public class AlertItem {
     // 股票名称
     private String stockName;
     // 告警项比较参数名称
-    private String AttrName;
+    private String attrName;
     // 告警项比较参数key
-    private String AttrKey;
+    private String attrKey;
     // 告警触发表达式
     private String expression;
     // 告警间隔时间

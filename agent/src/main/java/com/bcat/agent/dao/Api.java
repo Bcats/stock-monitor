@@ -1,6 +1,6 @@
 package com.bcat.agent.dao;
 
-import com.bcat.agent.model.StockData;
+import com.bcat.agent.entity.StockData;
 
 import java.util.List;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.bcat.agent.model;
+package com.bcat.agent.entity;
 
 import lombok.Getter;
 import lombok.ToString;
@@ -71,12 +71,9 @@ public class StockData {
 
     public StockData(List<String> stockDataList){
 
-        if (stockDataList.get(0) != null){
-            this.stockName = stockDataList.get(0);
-        }
-        if (stockDataList.get(1) != null){
-            this.todayOpenPrice = new BigDecimal(stockDataList.get(1));
-        }
+        this.stockName = stockDataList.get(0);
+
+        this.todayOpenPrice = new BigDecimal(stockDataList.get(1));
 
         this.yesterdayClosePrice = new BigDecimal(stockDataList.get(2));
 

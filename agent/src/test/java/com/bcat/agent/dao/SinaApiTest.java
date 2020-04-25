@@ -1,13 +1,12 @@
 package com.bcat.agent.dao;
 
 import com.bcat.agent.AgentApplicationTest;
-import com.bcat.agent.model.StockData;
+import com.bcat.agent.entity.StockData;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Map;
 
 public class SinaApiTest extends AgentApplicationTest {

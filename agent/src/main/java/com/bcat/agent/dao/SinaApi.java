@@ -1,10 +1,7 @@
 package com.bcat.agent.dao;
 
-import com.bcat.agent.model.StockData;
-import com.squareup.okhttp.Call;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
+import com.bcat.agent.entity.StockData;
+import com.squareup.okhttp.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
@@ -30,6 +27,7 @@ public class SinaApi implements Api {
         Call call = client.newCall(request);
         try {
             Response response = call.execute();
+            Headers headers = response.headers();
             String result = response.body().string().trim();
             return stockDataFormat(result);
         } catch (IOException e) {

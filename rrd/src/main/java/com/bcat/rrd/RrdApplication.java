@@ -1,8 +1,8 @@
 package com.bcat.rrd;
 
 import com.bcat.agent.dao.SinaApi;
-import com.bcat.agent.model.StockData;
-import com.bcat.judge.model.AlertItem;
+import com.bcat.agent.entity.StockData;
+import com.bcat.judge.entity.AlertItem;
 import com.bcat.judge.utils.AlertExpressionResolver;
 import com.bcat.alarm.utils.EmailUtils;
 import org.springframework.boot.SpringApplication;
